@@ -1,0 +1,20 @@
+{
+  "name": "miniflare-esbuild-ava",
+  "version": "1.0.0",
+  "description": "Example project using Miniflare, esbuild and AVA",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "esbuild --bundle --sourcemap --outdir=dist ./src/index.js",
+    "dev": "miniflare --watch --debug",
+    "test": "npm run build && ava --verbose test/*.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "esbuild": "^0.13.2",
+    "miniflare": "^1.4.1"
+  }
+}
